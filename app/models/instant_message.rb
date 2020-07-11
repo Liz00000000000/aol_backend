@@ -1,0 +1,2 @@
+class InstantMessage < ApplicationRecord
+end
