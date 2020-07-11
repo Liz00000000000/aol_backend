@@ -1,0 +1,2 @@
+class InstantMessagesController < ApplicationController
+end
