@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :away_messages
+  resources :friends
   resources :interests
   resources :instant_messages
   resources :emails

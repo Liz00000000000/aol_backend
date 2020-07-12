@@ -10,16 +10,31 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_07_11_165525) do
+ActiveRecord::Schema.define(version: 2020_07_12_143828) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "away_messages", force: :cascade do |t|
+    t.integer "user_id"
+    t.string "message"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "emails", force: :cascade do |t|
     t.integer "sender_id"
     t.integer "reciever_id"
     t.string "subject_line"
     t.string "content"
+    t.boolean "read"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "friends", force: :cascade do |t|
+    t.integer "friend_1"
+    t.integer "friend_2"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -47,6 +62,8 @@ ActiveRecord::Schema.define(version: 2020_07_11_165525) do
     t.string "password"
     t.string "picture"
     t.string "location"
+    t.string "username"
+    t.boolean "isOnline"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

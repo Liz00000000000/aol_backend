@@ -5,6 +5,7 @@ class CreateEmails < ActiveRecord::Migration[6.0]
       t.integer :reciever_id 
       t.string :subject_line
       t.string :content 
+      t.boolean :read
       t.timestamps
     end
   end

@@ -8,6 +8,8 @@ class CreateUsers < ActiveRecord::Migration[6.0]
       t.string :password
       t.string :picture
       t.string :location
+      t.string :username
+      t.boolean :isOnline
       t.timestamps
     end
   end
