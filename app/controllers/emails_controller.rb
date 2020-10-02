@@ -9,7 +9,7 @@ class EmailsController < ApplicationController
     end 
 
     def create
-        email = Email.craete(email_params)
+        email = Email.create(email_params)
         render json: email.to_json
     end 
 
