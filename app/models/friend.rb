@@ -1,4 +1,5 @@
 class Friend < ApplicationRecord
+    validates :friend_1, uniqueness: true
     validate :friend_1_not_equal_friend_2
 
     def friend_1_not_equal_friend_2
